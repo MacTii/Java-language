@@ -49,7 +49,7 @@ class ClientEcho {
 			
 			this.initBuffers(s);
 
-			System.out.println("Wpisz 'exit' aby wy³¹czyæ klienta");
+			System.out.println("Wpisz 'exit' aby wylczyc klienta");
 			System.out.println("Podaj tekst: ");
 			
 			this.communicateWithServer(out, in);
@@ -58,11 +58,11 @@ class ClientEcho {
 		}
 		catch(UnknownHostException e1)
 		{
-			System.out.println("Nieznany host - b³¹d");
+			System.out.println("Nieznany host - blad");
 		} 
 		catch (IOException e2) 
 		{
-			System.out.println("IO - b³¹d");
+			System.out.println("IO - bÂ³Â¹d");
 		}
 	}
 }
@@ -75,6 +75,6 @@ public class Client
 		int port = 4900;
 		ClientEcho var = new ClientEcho(host,port);
 		var.connectWithServer();
-		System.out.println("Wy³¹czanie klienta");
+		System.out.println("Wylaczanie klienta");
 	}
 }
