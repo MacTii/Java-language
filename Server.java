@@ -30,7 +30,7 @@ class ClientHandler implements Runnable
 		String line = null;
 		while((line = in.readLine()) != null)
 		{
-			System.out.println("Wiadomoœæ od klienta: " + line);
+			System.out.println("Wiadomosc od klienta: " + line);
 			out.println(line);
 		}
 	}
@@ -45,7 +45,7 @@ class ClientHandler implements Runnable
 		}
 		catch(IOException e1)
 		{
-			System.out.println("B³¹d IO");
+			System.out.println("BÂ³Â¹d IO");
 		}
 		finally
 		{
@@ -56,7 +56,7 @@ class ClientHandler implements Runnable
 			}
 			catch(IOException e1)
 			{
-				System.out.println("B³¹d IO");
+				System.out.println("Blad IO");
 			}
 		}
 	}
@@ -79,7 +79,7 @@ class ServerHandler
 			while(true)
 			{
 				Socket client = server.accept();
-				System.out.println("Nowy klient do³¹czy³ do serwera: " 
+				System.out.println("Nowy klient dolaczyl do serwera: " 
 									+ client.getInetAddress().getHostAddress());
 				
 				ClientHandler clientThread = new ClientHandler(client);
@@ -88,7 +88,7 @@ class ServerHandler
 		}
 		catch(IOException e)
 		{
-			System.out.println("B³¹d IO po stronie serwera");
+			System.out.println("Blad IO po stronie serwera");
 		}
 		finally 
 		{
@@ -99,7 +99,7 @@ class ServerHandler
 				}
 				catch(IOException e1)
 				{
-					System.out.println("B³¹d IO po stronie serwera/ przy zamykaniu");
+					System.out.println("Blad IO po stronie serwera/ przy zamykaniu");
 				}
 			}
 		}
