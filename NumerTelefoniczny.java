@@ -14,29 +14,29 @@ public class NumerTelefoniczny
 		
 		NrTelefoniczny numer3 = new NrTelefoniczny("+42", "111-231-123");
 		Adres adres3 = new Adres("ZYZ-Q", 43, "88-312", "Wroclaw");
-        Osoba osoba3 = new Osoba ("Dariusz", "Peksinski", adres3, numer3); // same address
+        	Osoba osoba3 = new Osoba ("Dariusz", "Peksinski", adres3, numer3); // same address
 		//System.out.println("Adres :" + osoba5.getAddress());
 		
 		//Osoba osoba5 = new Osoba("Konrad", "Tesinski", "ul. BNM 123", "+77", "444-333-222"); // person constructor with phone number
 		
-        NrTelefoniczny numerFirma1 = new NrTelefoniczny("+55", "777-888-999");
+        	NrTelefoniczny numerFirma1 = new NrTelefoniczny("+55", "777-888-999");
 		Adres adresFirma1 = new Adres("ASD-E", 107, "11-345", "Olchow");
-        Firma firma1 = new Firma("Company QWE", adresFirma1, numerFirma1);	
+        	Firma firma1 = new Firma("Company QWE", adresFirma1, numerFirma1);	
 		
 		NrTelefoniczny numerFirma2 = new NrTelefoniczny("+12", "311-374-323");
 		Adres adresFirma2 = new Adres("ZXC", 1, "77-123", "Tomaszow");
-        Firma firma2 = new Firma("CoMpNY LOPJK", adresFirma2, numerFirma2);
+        	Firma firma2 = new Firma("CoMpNY LOPJK", adresFirma2, numerFirma2);
 		
 		//Firma firma3 = new Firma("CompanY ZXC", "ul. CVB 3", "+88", "666-555-444"); // firm constructor with phone number 
 
-        TreeMap<NrTelefoniczny, Wpis> ksiazkaTelNumery = new TreeMap <NrTelefoniczny, Wpis>();
+        	TreeMap<NrTelefoniczny, Wpis> ksiazkaTelNumery = new TreeMap <NrTelefoniczny, Wpis>();
 		
 		ksiazkaTelNumery.put(numer1, osoba1);
-        ksiazkaTelNumery.put(numer2, osoba2);
-        ksiazkaTelNumery.put(numer3, osoba3);
+        	ksiazkaTelNumery.put(numer2, osoba2);
+        	ksiazkaTelNumery.put(numer3, osoba3);
 		
-        ksiazkaTelNumery.put(numerFirma1, firma1);
-        ksiazkaTelNumery.put(numerFirma2, firma2);
+        	ksiazkaTelNumery.put(numerFirma1, firma1);
+        	ksiazkaTelNumery.put(numerFirma2, firma2);
 		
 		Set<Adres> set = new TreeSet<Adres>();
 		
@@ -51,7 +51,7 @@ public class NumerTelefoniczny
 		
 		System.out.println();
 		System.out.println("Ksiazka telefoniczna (wzgledem numerow telefonu) :");
-        for(Map.Entry<NrTelefoniczny, Wpis> entry : ksiazkaTelNumery.entrySet())
+        	for(Map.Entry<NrTelefoniczny, Wpis> entry : ksiazkaTelNumery.entrySet())
 			entry.getValue().opis();
 	}
 }
