@@ -8,16 +8,16 @@ public class Wektory
 	
 	boolean isDouble(String str)
 	{
-        try
+        	try
 		{
-            Double.parseDouble(str);
-            return true;
+            		Double.parseDouble(str);
+            		return true;
 			
-        } catch (NumberFormatException e)
+        	}catch (NumberFormatException e)
 		{
-            return false;
-        }
-    }
+            		return false;
+        	}
+    	}
 	
 	public void putNumbersIntoVectors(String message, Scanner scan)
 	{
