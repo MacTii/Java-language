@@ -7,58 +7,78 @@ import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.text.ParseException;
+import java.util.*;
 
 class ClientHandler implements Runnable
 {
 	private final Socket clientSocket;
 	private PrintWriter out;
 	private BufferedReader in;
+	private int numberOfClient;
+	QueueHandler queue;
 	
-	ClientHandler(Socket socket)
+	ClientHandler(Socket socket, int number, QueueHandler q)
 	{
 		clientSocket = socket;
+		numberOfClient = number;
+		queue = q;
 		out = null;
 		in = null;
+	}
+	
+	int getNumberOfClient()
+	{
+		return numberOfClient;
 	}
 	
 	void initBuffers() throws IOException
 	{
 		out = new PrintWriter(clientSocket.getOutputStream(), true);
 		InputStreamReader ins = new InputStreamReader(clientSocket.getInputStream());
-		in = new BufferedReader(ins);		
+		in = new BufferedReader(ins);
 	}
 	
-	void takeAndSendDatas() throws IOException, ParseException, InterruptedException
+	int checkDate(String t) throws ParseException, InterruptedException, Exception
+	{
+		SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");  
+			
+		Date inputDate = formatter.parse(t);
+		Date date = new Date();
+		
+		String[] splittedTime = t.split(":");
+		int hour = Integer.parseInt(splittedTime[0]);
+		int minute = Integer.parseInt(splittedTime[1]);
+			
+		if(hour < 0 || hour > 24)
+			throw new Exception("Zly format daty");
+			
+		if(minute < 0 || minute > 59)
+			throw new Exception("Zly format daty");
+		
+		int r = formatter.format(date).compareTo(formatter.format(inputDate));
+		return r;
+	}
+	
+	void takeAndSendDatas() throws ParseException, InterruptedException, Exception
 	{
 		String text = null;
 		String time = null;
+
 		while((text = in.readLine()) != null && (time = in.readLine()) != null)
 		{
-			System.out.print("Wiadomoœæ od klienta: ");
+			System.out.print("WiadomoÅ›Ä‡ od klienta " + this.getNumberOfClient() + ": ");
 			System.out.print(text + " ");
 			System.out.println(time);
 			
-			SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");  
+			int result = this.checkDate(time);
+			Notify n = new Notify(clientSocket, time, text);
 			
-			Date inputDate = formatter.parse(time);
-			Date date;
-			
-			int result;
-			while(true)
+			queue.addToQueue(n);
+			if(queue.isThreadRunning() == false)
 			{
-				date = new Date();
-				result = formatter.format(date).compareTo(formatter.format(inputDate));
-				//System.out.println(result);
-				Thread.sleep(3000);
-				if(result == 0 || result > 0)
-					break;
+				new Thread(queue).start();
 			}
 			
-			if(result == 0)
-			{
-				out.println(text);
-				out.println(time);
-			}
 		}
 	}
 	
@@ -72,39 +92,189 @@ class ClientHandler implements Runnable
 		}
 		catch(IOException e1)
 		{
-			System.out.println("B³¹d IO");
+			e1.printStackTrace();
+			System.out.println("BÅ‚Ä…d IO");
 		}
 		catch(ParseException e2)
 		{
-			System.out.println("B³¹d");
+			System.out.println("BÅ‚Ä…d");
 		}
 		catch(InterruptedException e3)
 		{
-			System.out.println("B³¹d");
+			System.out.println("BÅ‚Ä…d");
 		}
-		finally
+		catch(Exception e4)
 		{
-			try {
-				if(out != null) out.close();
-				if(in  != null) in.close();
-				clientSocket.close();
-			}
-			catch(IOException e1)
+			System.out.println(e4.getMessage());
+		}
+		// finally
+		// {
+			// try {
+				//if(out != null) out.close();
+				//if(in  != null) in.close();
+				// clientSocket.close();
+			// }
+			// catch(IOException e1)
+			// {
+				// System.out.println("BÅ‚Ä…d IO");
+			// }
+		// }
+	}
+}
+
+class Notify implements Comparable<Notify>
+{
+	private Socket clientSocket;
+	private String time;
+	private String message;
+	
+	Notify(Socket client, String t, String m)
+	{
+		clientSocket = client;
+		time = t;
+		message = m;
+	}
+	
+	Socket getSocket()
+	{
+		return clientSocket;
+	}
+	
+	String getTime()
+	{
+		return time;
+	}
+	
+	String getMessage()
+	{
+		return message;
+	}
+	
+	public int compareTo(Notify n)
+	{
+		int compare = time.compareTo(n.time);
+		return compare;
+	}
+}
+
+class QueueHandler implements Runnable
+{
+	PriorityQueue<Notify> pQueue;
+	private PrintWriter out;
+	private final Socket clientSocket;
+	private boolean check;
+	
+	QueueHandler(Socket socket, PriorityQueue<Notify> q)
+	{
+		clientSocket = socket;
+		pQueue = q;
+		out = null;
+		check = false;
+	}
+	
+	void addToQueue(Notify n)
+	{
+		pQueue.add(n);
+	}
+	
+	void init(Notify n) throws IOException
+	{
+		out = new PrintWriter(n.getSocket().getOutputStream(), true);
+	}
+	
+	boolean isThreadRunning()
+	{
+		return check;
+	}
+	
+	void checkQueue() throws ParseException, IOException, InterruptedException
+	{
+		while(true)
+		{
+			Notify tmp = pQueue.peek();
+			if(tmp == null)
 			{
-				System.out.println("B³¹d IO");
+				check = false;
+				break;
+			}
+			
+			SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");
+			Date inputDate = formatter.parse(tmp.getTime());
+			Date date = new Date();
+			int r = formatter.format(date).compareTo(formatter.format(inputDate));
+			Thread.sleep(3000);
+			
+			if(r == 0)
+			{
+				init(tmp);
+				//out.flush();
+				out.println(tmp.getMessage());
+				out.println(tmp.getTime());
+				pQueue.poll();
+				
 			}
 		}
 	}
+	
+	public void run()
+	{
+		try
+		{
+			check = true;
+			checkQueue();
+		}
+		catch(ParseException e1)
+		{
+			System.out.println("BÅ‚Ä…d");
+		}
+		catch(IOException e2)
+		{
+			System.out.println("BÅ‚Ä…d IO");
+		}
+		catch(InterruptedException e3)
+		{
+			System.out.println("BÅ‚Ä…d");
+		}
+		// finally
+		// {
+			// try {
+				//if(out != null) out.close();
+				//clientSocket.close();
+				check = false;
+			// }
+			// catch(IOException e1)
+			// {
+				// System.out.println("BÅ‚Ä…d IO");
+			// }
+		// }
+	}
+	
+	
 }
 
 class ServerHandler
 {
 	private int port;
 	private ServerSocket server;
+	private int numberOfClient;
+	PriorityQueue<Notify> pQueue;
+	
 	ServerHandler(int p)
 	{
 		port = p;
+		pQueue = new PriorityQueue<>();
+		numberOfClient = 0;
 		server = null;
+	}
+	
+	void addNewClient()
+	{
+		numberOfClient++;
+	}
+	
+	int getNumberOfClient()
+	{
+		return numberOfClient;
 	}
 	
 	void serverLaunch()
@@ -114,16 +284,18 @@ class ServerHandler
 			while(true)
 			{
 				Socket client = server.accept();
-				System.out.println("Nowy klient do³¹czy³ do serwera: " 
-									+ client.getInetAddress().getHostAddress());
+				this.addNewClient();
+				System.out.println("Nowy klient doÅ‚Ä…czyÅ‚ do serwera: " + "Klient " + this.getNumberOfClient());
 				
-				ClientHandler clientThread = new ClientHandler(client);
+				QueueHandler queueThread = new QueueHandler(client, pQueue);
+				ClientHandler clientThread = new ClientHandler(client, this.getNumberOfClient(), queueThread);
+				
 				new Thread(clientThread).start();
 			}
 		}
 		catch(IOException e)
 		{
-			System.out.println("B³¹d IO po stronie serwera");
+			System.out.println("BÅ‚Ä…d IO po stronie serwera");
 		}
 		finally 
 		{
@@ -134,14 +306,15 @@ class ServerHandler
 				}
 				catch(IOException e1)
 				{
-					System.out.println("B³¹d IO po stronie serwera/ przy zamykaniu");
+					System.out.println("BÅ‚Ä…d IO po stronie serwera/ przy zamykaniu");
 				}
 			}
 		}
 	}
 }
 
-public class Server {
+public class Server
+{
 	public static void main(String[] args)
 	{
 		
