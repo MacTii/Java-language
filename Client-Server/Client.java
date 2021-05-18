@@ -5,9 +5,12 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.ParseException;
 
-class ClientEcho {
-	
+class ClientEcho
+{
 	private String host;
 	private int port;
 	private PrintWriter out;
@@ -28,7 +31,23 @@ class ClientEcho {
 		in = new BufferedReader(ins);		
 	}
 	
-	void communicateWithServer(PrintWriter out, BufferedReader in) throws IOException
+	void checkDate(String t) throws ParseException, Exception
+	{
+		SimpleDateFormat formatter = new SimpleDateFormat("HH:mm");  
+		Date inputDate = formatter.parse(t);
+			
+		String[] splittedTime = t.split(":");
+		int hour = Integer.parseInt(splittedTime[0]);
+		int minute = Integer.parseInt(splittedTime[1]);
+			
+		if(hour < 0 || hour > 24)
+			throw new Exception("Zly format daty");
+			
+		if(minute < 0 || minute > 59)
+			throw new Exception("Zly format daty");
+	}
+	
+	void communicateWithServer(PrintWriter out, BufferedReader in) throws IOException, ParseException, Exception
 	{
 		Scanner scan = new Scanner(System.in);
 		String text = null;
@@ -40,11 +59,11 @@ class ClientEcho {
 				break;
 			time = scan.nextLine();
 			
+			this.checkDate(time);
+			
 			out.println(text);
 			out.println(time);
 			out.flush();
-			
-			System.out.println("Odpowiedz od serwera: " + in.readLine() + " " + in.readLine());
 		}
 		scan.close();
 	}
@@ -56,20 +75,57 @@ class ClientEcho {
 			
 			this.initBuffers(s);
 
-			System.out.println("Wpisz 'exit' aby wy³¹czyæ klienta");
+			System.out.println("Wpisz 'exit' aby wyÅ‚Ä…czyÄ‡ klienta");
 			System.out.println("Podaj tekst i godzine: ");
 			
+			ClientPrinter clientThread = new ClientPrinter(s);
+			new Thread(clientThread).start();
 			this.communicateWithServer(out, in);
-			
-			s.close();
 		}
 		catch(UnknownHostException e1)
 		{
-			System.out.println("Nieznany host - b³¹d");
+			System.out.println("Nieznany host - bÅ‚Ä…d");
 		} 
 		catch (IOException e2) 
 		{
-			System.out.println("IO - b³¹d");
+			System.out.println("IO - bÅ‚Ä…d");
+		}
+		catch (ParseException e3)
+		{
+			System.out.println("Zla data");
+		}
+		catch(Exception e4)
+		{
+			System.out.println(e4.getMessage());
+		}
+	}
+}
+
+class ClientPrinter implements Runnable
+{
+	private Socket socket;
+	BufferedReader in;
+	
+	ClientPrinter(Socket s) throws IOException
+	{
+		socket = s;
+		InputStreamReader ins = new InputStreamReader(s.getInputStream());
+		in = new BufferedReader(ins);
+	}
+	
+	public void run()
+	{
+		try
+		{
+			while(true)
+			{
+				if(in.ready())
+					System.out.println("Odpowiedz od serwera: " + in.readLine() + " " + in.readLine());
+			}
+		}
+		catch(IOException e)
+		{
+			System.out.println("BÅ‚Ä…d");
 		}
 	}
 }
@@ -82,6 +138,6 @@ public class Client
 		int port = 4900;
 		ClientEcho var = new ClientEcho(host,port);
 		var.connectWithServer();
-		System.out.println("Wy³¹czanie klienta");
+		System.out.println("WyÅ‚Ä…czanie klienta");
 	}
 }
