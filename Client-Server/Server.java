@@ -209,7 +209,7 @@ class QueueHandler implements Runnable
 				init(tmp);
 				//out.flush();
 				out.println(tmp.getMessage());
-				out.println(tmp.getTime());
+				//out.println(tmp.getTime());
 				pQueue.poll();
 				
 			}
@@ -306,7 +306,7 @@ class ServerHandler
 				}
 				catch(IOException e1)
 				{
-					System.out.println("Błąd IO po stronie serwera/ przy zamykaniu");
+					System.out.println("Blad IO po stronie serwera/ przy zamykaniu");
 				}
 			}
 		}
