@@ -1,0 +1,755 @@
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
+
+Ostatnia aktualizacja strony: 02/24/2020 12:07:40
+Projektowanie aplikacji internetowych
+
+
+Informacje
+Zapraszam chetnych do oddania czegokolowiek w poniedzialek (24.02) godz. 19. lab A.
+Materialy wykladowe
+Przydatne linki
+Strony w j. angielskim
+http://www.oracle.com/technetwork/java/index.html
+Java Tutorial
+Java World
+Java Zone
+Strony w j. polskim:
+http://www.java.pl
+API
+JSE 8 API Specification
+Laboratorium
+Cwiczenia laboratoryjne
+Cwiczenia nieobowiazkowe (nie trzeba ich pokazywac):
+Napisz program, ktory pobiera liste plikow z linii polecen i wyswietla liczbe wierszy kazdego z nich. Program powinien utworzyc jeden watek dla kazdego z plikow i uzyc tych watkow do zliczenia liczby wierszy kazdego z plikow rownoczenie. Utworz wersje programu, ktora odczytuje pliki nie jednoczesnie a sekwencyjnie. Porownaj wydajnosc wielowatkowego i jednowatkowego programu uzywajac System.currentTimeMillis() do okreslenia czasu wykonania. Porownania dokonaj dla dwoch, trzech i pieciu plikow.
+Napisz program laczacy sie ze strona podana jako argument wywolania programu i wypisujacy wszystkie znalezione na niej linki i adresy email wykorzystujac w tym celu wyrazenia regularne (pakiet java.util.regex). Oprocz tego program ma zapisac do pliku wszystkie parametry polaczenia, adres IP komputera na ktorym znajduje sie strona oraz naglowek strony (zawartosc sekcji <head>).
+Echo klient i echo serwer wielowatkowy (dla ulatwienia zacznij od jednowatkowego)
+Cwiczenia obowiazkowe
+Aplikacja obslugujaca salon fryzjerski z jednym fryzjerem. Dla ulatwienia nalezy przyjac ze salon pracuje w godzinach 10-18 a kazda wizyta trwa rowno godzine. Klienci zglaszaja (i wycofuja) terminy wizyt ktore chcieliby odbyc. Klienci widza aktualny stan zajetosci fryzjera (na ekranie klienta wyswietla sie zmiana widoku po kazdej aktualizacji terminarza fryzjera). Serwer rozsyla komunikaty o zarezerwowanych i wycofanych uslugach (i terminach) do wszystkich klientow powodujac odswiezenie widoku klienta. Nalezy zadbac o odpowiednia synchronizacje dostepu do zasobow i ich aktualizacje. Nalezy zadbac o wydajnosc aplikacji: zuzycie procesora i wykorzystanie lacza sieciowego.
+Napisz program, ktory zasymuluje nastepujace zjawiska: deadlock, livelock, starvation. Rodzaj symulacji powinien byc parametrem wywolania programu. Zrob ograniczenie czasowe na dane zjawisko, tak aby program sie nie zawiesil.
+Napisz prototypowe implementacje dwóch z czterech algorytmów optymalizacyjnych (do ustalenia z prowadzacym które). Calosc rozwiazania oprzyj na kontenerze Docker:
+- algorytm genetyczny,
+- algorytm symulowanego wyzarzania,
+- algorytm roju czastek,
+- algorytm DE (differential evolution).
+Zaproponuj uniwersalny sposób przekazywania funkcji do optymalizacji dla funkcji dwuwymiarowych.
+Jako podstawe testowania wykorzystaj funkcje Rosenbrocka. Przetestuj jednak algorytmy także na bardziej skomplikowanych funkcjach.
+Zwizualizuj kolejne kroki kazdego z algorytmów (forma wizualizacji do opracowania przez autora) na przykladzie funkcji dwuwymiarowych.
+Przykżadowe funkcje do testowania: https://en.wikipedia.org/wiki/Test_functions_for_optimization
+
+Projekt:
+Gra sieciowa. Reguly gry (projekt dla jednej osoby):
+gra zaklada nieskonczona liczbe graczy lub gdy ze wzgledu na reguly to nie ma sensu, gre w wielu pokojach rownoczesnie
+gra zaklada przynajmniej dwie równolegle formy komunikacji (np. gra wlasciwa plus chat)
+komunikacja pomiedzy klientami (graczami) odbywa sie zawsze za posrednictwem serwera
+jakas czesc projektu musi byc napisana w jezyku Java i bazować na polaczeniach TCP/IP (sockets)
+serwer jest odporny na nieprawidlowe polecenia przesylane przez klienta
+konfiguracja serwera w pliku XML.
+nalezy dostarczyc takze zbior testow jednostkowych (junit w najnowszej wersji, dodatkowy plus za selenium - gdyby projekt mial TAKZE warstwe WWW)
+należy przygotowac dokumentacje uwzględniajaca wszystkie w.w. aspekty.
+lista gier która NA PEWNO nie moze zostac wykonana w ramach zaliczenia projektu (nie jest to lista zamknieta - do ustalenia z prowadzacym), oczekuje sie projektow bardziej ambitnych: ping-pong, warcaby, szachy, statki, wisielec, wszystkie gry karciane
