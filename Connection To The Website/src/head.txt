@@ -1,0 +1,42 @@
+169.254.213.57
+null
+<head>
+       <title>Java regex email - Stack Overflow</title>
+       <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+       <link rel="apple-touch-icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+       <link rel="image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a">
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+       <link rel="canonical" href="https://stackoverflow.com/questions/8204680/java-regex-email" />
+       <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+       <meta property="og:type" content= "website" />
+       <meta property="og:url" content="https://stackoverflow.com/questions/8204680/java-regex-email"/>
+       <meta property="og:site_name" content="Stack Overflow" />
+       <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=73d79a89bded" />
+       <meta name="twitter:card" content="summary"/>
+       <meta name="twitter:domain" content="stackoverflow.com"/>
+       <meta name="twitter:title" property="og:title" itemprop="name" content="Java regex email" />
+       <meta name="twitter:description" property="og:description" itemprop="description" content="First of all, I know that using regex for email is not recommended but I gotta test this out.&#xA;&#xA;I have this regex:&#xA;&#xA;\b[A-Z0-9._%-]&#x2B;@[A-Z0-9.-]&#x2B;\.[A-Z]{2,4}\b&#xD;&#xA;In Java, I did this:&#xA;&#xA;Pattern p = Pattern." />
+   <script id="webpack-public-path" type="text/uri-list">https://cdn.sstatic.net/</script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script async src="https://cdn.sstatic.net/Js/third-party/stacks/stacks.min.js?v=4c00f8ce1b14"></script>
+   <script src="https://cdn.sstatic.net/Js/stub.en.js?v=455d01420da0"></script>
+       <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=47f2e10eb087">
+   <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/primary.css?v=4a3262df0354">
+               <link rel="alternate" type="application/atom+xml" title="Feed for question &#x27;Java regex email&#x27;" href="/feeds/question/8204680">
+           <meta name="twitter:app:country" content="US" />
+           <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+           <meta name="twitter:app:id:iphone" content="871299723" />
+           <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/8204680/java-regex-email" />
+           <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+           <meta name="twitter:app:id:ipad" content="871299723" />
+           <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/8204680/java-regex-email" />
+           <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+           <meta name="twitter:app:url:googleplay" content="https://stackoverflow.com/questions/8204680/java-regex-email">
+           <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+       <script>
+           StackExchange.ready(function () {                    StackExchange.using("snippets", function () {                        StackExchange.snippets.initSnippetRenderer();                    });                                    StackExchange.using("postValidation", function () {                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');                });                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:3,shownCommentCount:3,enableTables:true,questionId:8204680});                styleCode();                    StackExchange.realtime.subscribeToQuestion('1', '8204680');                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.js-post-body'); });            });        </script>
+                               <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/Channels/channels.css?v=47a5e0f03c81">
+                           <script>
+       StackExchange.init({"locale":"en","serverTime":1634760757,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"cookieDomain":".stackoverflow.com","childUrl":"https://meta.stackoverflow.com","styleCodeWithHighlightjs":true,"negativeVoteScoreFloor":null,"enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"ede7820f168d11908ec868425568f1ece1c255e45ba0097633bc153a3ab5b75a","tid":"64d5e017-23fc-9cc6-15c2-d540c1024947","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4},"svgIconPath":"https://cdn.sstatic.net/Img/stacks-icons","svgIconHash":"6c499ffd82de"}, {"userProfile":{"openGraphAPIKey":"4a307e43-b625-49bb-af15-ffadf2bda017"},"userMessaging":{"showNewFeatureNotice":true},"tags":{},"subscriptions":{"defaultBasicMaxTrueUpSeats":250,"defaultFreemiumMaxTrueUpSeats":50,"defaultMaxTrueUpSeats":1000},"snippets":{"renderDomain":"stacksnippets.net","snippetsEnabled":true},"site":{"allowImageUploads":true,"enableImgurHttps":true,"enableUserHovercards":true,"forceHttpsImages":true,"styleCode":true},"questions":{"enableQuestionTitleLengthLiveWarning":true,"maxTitleSize":150,"questionTitleLengthStartLiveWarningChars":50},"intercom":{"appId":"inf0secd","hostBaseUrl":"https://stacksnippets.net"},"paths":{},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"mentions":{"maxNumUsersInDropdown":50},"markdown":{"enableTables":true},"legal":{"oneTrustConfigId":"c3d9f1e3-55f3-4eba-b268-46cee4c6789c"},"flags":{"allowRetractingCommentFlags":true,"allowRetractingFlags":true},"elections":{"opaVoteResultsBaseUrl":"https://www.opavote.com/results/"},"comments":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true}});        StackExchange.using.setCacheBreakers({"js/adops.en.js":"22a9bd59b1e9","js/ask.en.js":"3c1bfb8c4e11","js/begin-edit-event.en.js":"46ca237edded","js/copy-transpiled.en.js":"96290caf7914","js/cm.en.js":"4753afd31ade","js/events.en.js":"4440ad2e4286","js/explore-qlist.en.js":"d33e3ab2f2e0","js/full-anon.en.js":"c6615615e3c6","js/full.en.js":"40320eb5ea71","js/help.en.js":"1cab46b32d45","js/highlightjs-loader.en.js":"fe602e78d150","js/inline-tag-editing.en.js":"7b035ffbef0e","js/keyboard-shortcuts.en.js":"f128bf285985","js/markdown-it-loader.en.js":"3cf48b97efb3","js/modElections.en.js":"fc13b5b021b8","js/mobile.en.js":"798d79ec5243","js/moderator.en.js":"687e18ae9c25","js/postCollections-transpiled.en.js":"e809d0c4cbc7","js/post-validation.en.js":"9e61521d818f","js/prettify-full.en.js":"8cd093d0a28c","js/question-editor.en.js":"","js/review.en.js":"4bf34e919fbc","js/review-v2-transpiled.en.js":"6d003b274cb8","js/revisions.en.js":"41714edcf185","js/stacks-editor.en.js":"21e48acc2545","js/tageditor.en.js":"0c2f3f8a2825","js/tageditornew.en.js":"b74828bb8da7","js/tagsuggestions.en.js":"4d2d70ee1e16","js/unlimited-transpiled.en.js":"bd0463c4caf5","js/wmd.en.js":"0014320ab179","js/snippet-javascript-codemirror.en.js":"00dee0c253c2"});        StackExchange.using("gps", function() {             StackExchange.gps.init(false);        });    </script>
+   <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+   </head>
